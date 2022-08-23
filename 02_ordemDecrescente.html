@@ -1,0 +1,47 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que leia três números e mostre-os em ordem decrescente.
+    */
+
+    //ENTRADA
+    const numero1 = Number(prompt("Informe seu primeiro numero"))
+    const numero2 = Number(prompt("Informe seu primeiro numero"))
+    const numero3 = Number(prompt("Informe seu primeiro numero"))
+
+    //PROCESSAMENTO
+    if(numero1>numero2){
+        if(numero2>numero3){
+            document.write(`${numero1} ${numero2} ${numero3}`)
+        }
+        if(numero3>numero2){
+            document.write(`${numero1} ${numero3} ${numero2}`)
+        }
+    }
+    else if(numero2>numero1){
+        if(numero3>numero1){
+            document.write(`${numero2} ${numero3} ${numero1}`)
+        }
+        if(numero1>numero3){
+            document.write(`${numero2} ${numero3} ${numero1}`)
+        }
+    }
+    else if(numero3>numero1){
+        if(numero2>numero1){
+            document.write(`${numero3} ${numero2} ${numero1}`)
+        }
+        if(numero1>numero2){
+            document.write(`${numero2} ${numero1} ${numero2}`)
+        }
+    }
+    else{
+        document.write ("todos os numeros são iguais ")
+    }
+    
+
+
+    
+    //SAÍDA
+
+
+</script>

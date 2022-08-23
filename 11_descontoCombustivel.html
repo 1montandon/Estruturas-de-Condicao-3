@@ -1,0 +1,52 @@
+<script>
+    /*
+    //PROBLEMA
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+    const combustível = (prompt("Informe o tipo de combusivel (A ou G)"))
+    const litros = Number(prompt("Informe quantos litros foram comprados"))
+
+    //PROCESSAMENTO
+    let valorLitrosAntes 
+    let valorLitrosComDesconto 
+    let combustivelOque 
+    
+    if (combustível.toUpperCase === "A" ){
+        combustivelOque = " Alcool"
+        if(litros<20){ 
+            valorLitrosAntes = litros * 6.10
+            valorLitrosComDesconto =  ((valorLitrosAntes*0.03)*litros)-valorLitrosAntes
+        }
+        else if(litros>20){
+            valorLitrosAntes = litros * 6.10
+            valorLitrosComDesconto =  ((valorLitrosAntes*0.05)*litros)-valorLitrosAntes
+        }
+    } 
+    else if (combustível.toUpperCase === "G" ){
+        combustivelOque = " Gasolina"
+        if(litros<20){ 
+            valorLitrosAntes = litros * 6.10
+            valorLitrosComDesconto =  ((valorLitrosAntes*0.04)*litros)-valorLitrosAntes
+        }
+        else if(litros>20){
+            valorLitrosAntes = litros * 6.10
+            valorLitrosComDesconto =  ((valorLitrosAntes*0.06)*litros)-valorLitrosAntes
+        }
+    } 
+    document.write(`O valor total por ${litros} litros de ${combustivelOque} é de ${valorLitrosComDesconto}`)
+    
+    //SAÍDA
+
+
+</script>
