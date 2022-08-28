@@ -6,12 +6,42 @@
     */
 
     //ENTRADA
+    const hemisferio = (prompt("Informe seu hemisferio (S = sul | N = norte)")).toLowerCase()
+    const mes = (prompt("Informe seu mes (janeiro | fevereiro | marco | etc... )")).toLowerCase()
 
+    let  estacao
 
     //PROCESSAMENTO
-
+    if(hemisferio === "n"){
+        if (mes === "dezembro" || mes === "janeiro" || mes === "fevereiro" || mes === "marco" ){
+            estacao = "Inverno"
+        }
+        else if (mes === "abril" || mes === "maio" || mes === "junho"){
+            estacao = "primaveira"
+        }
+        else if (mes === "julho" || mes === "agosto" || mes === "setembro"){
+            estacao = "verao"
+        }
+        else {
+            estacao = "outono"
+        }
+    }
+   else if(hemisferio === "s"){
+        if (mes === "junho" || mes === "julho" || mes === "agosto" || mes === "setembro" ){
+            estacao = "verao"
+        }
+        else if (mes === "outubro" || mes === "novembro" || mes === "dezembro"){
+            estacao = "outono"
+        }
+        else if (mes === "janeiro" || mes === "fevereiro" || mes === "marco"){
+            estacao = "inverno"
+        }
+        else {
+            estacao = "primaveira"
+        }
+    }
     
     //SAÍDA
-
-
-</script>
+    document.write(`sua estacao atual e ${estacao}`)
+    
+ </script>

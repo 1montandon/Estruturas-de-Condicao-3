@@ -8,9 +8,24 @@
     */
    
     //ENTRADA
+    const valor = parseInt(prompt("informe o valor do saque (de 10 a 600r$)"))
 
     //PROCESSAMENTO
 
+    if (valor <= 600 && valor >= 10){
+    const c100 = Math.floor(valor / 100)
+    const valorSemC100 = valor - (c100 * 100)
+    const c50 = Math.floor(valorSemC100 /50)
+    const valorSemC100C50 = valor - ((c100 * 100)+(c50 * 50))
+    const c10 = Math.floor(valorSemC100C50 / 10)
+    const valorSemC100C50C10 = valor - ((c100 * 100)+(c50 * 50) + (c10 * 10))
+    const c5 = Math.floor(valorSemC100C50C10 / 5)
+    const valorSemC100C50C10C5 = valor - ((c100 * 100)+(c50 * 50)+(c10 * 10)+(c5 * 5))
+    const c1 = Math.floor(valorSemC100C50C10C5 / 1)
+    document.write(`Você recebera ${c100} notas 100, ${c50} notas de 50, ${c10} notas de 10, ${c5} notas de 5, ${c1} notas de 1`)}
+    else
+    document.write("Não é possivel realizar esse saque")
+    
     //SAÍDA
 
     </script>

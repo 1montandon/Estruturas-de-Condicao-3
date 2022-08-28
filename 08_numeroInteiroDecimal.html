@@ -6,12 +6,18 @@
     */
 
     //ENTRADA
+    const numero = Number(prompt("Informe seu numero"))
+    let conceito
 
 
     //PROCESSAMENTO
-
+    if (numero % 1 === 0){
+        conceito = "inteiro"
+    }
+    else conceito = "decimal"
     
     //SAÍDA
+    document.write(conceito)
 
 
 </script>

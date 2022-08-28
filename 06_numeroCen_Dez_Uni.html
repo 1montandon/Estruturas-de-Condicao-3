@@ -20,10 +20,13 @@
     const unidades = Math.floor((numero%100)%10)
 
     if(centenas > 1) conceito  =  centenas + " centenas, "
+    else if (centenas === 0) conceito = centenas + " centenas, "
     else conceito = centenas + " centena, "
-    if(dezenas > 1)conceito = conceito  + dezenas + " dezenas e "
+    if(dezenas > 1) conceito = conceito  + dezenas + " dezenas e "
+    else if (dezenas === 0) conceito = dezenas + " dezenas, "
     else conceito = conceito + dezenas + " dezena e "
-    if(unidades > 1)conceito = conceito + unidades + " unidades. "
+    if(unidades > 1) conceito = conceito + unidades + " unidades. "
+    else if (unidades === 0) conceito = unidades + " unidade, "
     else conceito = conceito + unidades + " unidade. "
 
     document.write(conceito)

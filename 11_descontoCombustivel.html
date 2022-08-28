@@ -14,7 +14,7 @@
     */
 
     //ENTRADA
-    const combustível = (prompt("Informe o tipo de combusivel (A ou G)"))
+    const combustivel = (prompt("Informe o tipo de combusivel (A ou G)"))
     const litros = Number(prompt("Informe quantos litros foram comprados"))
 
     //PROCESSAMENTO
@@ -22,7 +22,7 @@
     let valorLitrosComDesconto 
     let combustivelOque 
     
-    if (combustível.toUpperCase === "A" ){
+    if (combustivel.toUpperCase() === "A" ){
         combustivelOque = " Alcool"
         if(litros<20){ 
             valorLitrosAntes = litros * 6.10
@@ -33,7 +33,7 @@
             valorLitrosComDesconto =  ((valorLitrosAntes*0.05)*litros)-valorLitrosAntes
         }
     } 
-    else if (combustível.toUpperCase === "G" ){
+    else if (combustivel.toUpperCase() === "G" ){
         combustivelOque = " Gasolina"
         if(litros<20){ 
             valorLitrosAntes = litros * 6.10
@@ -44,7 +44,7 @@
             valorLitrosComDesconto =  ((valorLitrosAntes*0.06)*litros)-valorLitrosAntes
         }
     } 
-    document.write(`O valor total por ${litros} litros de ${combustivelOque} é de ${valorLitrosComDesconto}`)
+    document.write(`O valor total por ${litros} litros de ${combustivelOque} é de ${(valorLitrosComDesconto*-1).toFixed(2)}R$`)
     
     //SAÍDA
 
