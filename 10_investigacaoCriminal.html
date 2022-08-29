@@ -11,9 +11,32 @@
     */
 
     //ENTRADA
+    const p1 = parseInt(prompt("Telefonou para a vítima? (0 = não | 1 = sim)"))
+    const p2 = parseInt(prompt("Esteve no local do crime? (0 = não | 1 = sim)"))
+    const p3 = parseInt(prompt("Mora perto da vitima? (0 = não | 1 = sim)"))
+    const p4 = parseInt(prompt("Devia para  a vítima? (0 = não | 1 = sim)"))
+    const p5 = parseInt(prompt("Já trabalhou com a vítima? (0 = não | 1 = sim)"))
 
     //PROCESSAMENTO
+    const perguntas = p1 + p2 + p3 + p4 + p5
+    let fator
+
+    if (perguntas === 0 || perguntas === 1){
+        fator = "inocente"
+    }
+    else if (perguntas === 2 ){
+        fator = "suspeito"
+    }
+    else if (perguntas === 3 || perguntas === 4){
+        fator = "cumplice"
+    }
+    else if (perguntas === 5){
+        fator = "culpado"
+    }
+    else{
+        fator = "invalido"
+    }
     
     //SAÍDA
-
+    document.write(fator)
 </script>

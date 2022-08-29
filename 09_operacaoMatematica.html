@@ -8,12 +8,122 @@
     */
 
     //ENTRADA
+    const a = Number(prompt("informe seu primeiro numero"))
+    const b = Number(prompt("informe seu segundo numero"))
+    const operacao = String(prompt("informe sua operação desejada (+ | - | / | x)")).toLowerCase()
+    let resultado
+    let parimpar
+    let postivionegativo
+    let inteirodecimal
 
 
     //PROCESSAMENTO
+    if (operacao === "+") {
+        resultado = a + b
+
+        if (resultado % 2 === 0){
+            parimpar = "par"
+        }
+        else{
+            parimpar = "impar"
+        }
+
+        if (resultado * 1 >= 0 ){
+            postivionegativo = "positivo"
+        }
+        else{
+            postivionegativo = "negativo"
+        }
+
+        if (resultado % 1 === 0){
+            inteirodecimal = "inteiro"
+        }
+        else{
+            inteirodecimal = "decimal"
+        }
+        
+    }
+    else if(operacao === "-"){
+        resultado = a - b
+
+        if (resultado % 2 === 0){
+            parimpar = "par"
+        }
+        else{
+            parimpar = "impar"
+        }
+
+        if (resultado * 1 >= 0 ){
+            postivionegativo = "positivo"
+        }
+        else{
+            postivionegativo = "negativo"
+        }
+
+        if (resultado % 1 === 0){
+            inteirodecimal = "inteiro"
+        }
+        else{
+            inteirodecimal = "decimal"
+        }
+
+    }
+
+    else if(operacao === "x"){
+        resultado = a * b
+
+        if (resultado % 2 === 0){
+            parimpar = "par"
+        }
+        else{
+            parimpar = "impar"
+        }
+
+        if (resultado * 1 >= 0 ){
+            postivionegativo = "positivo"
+        }
+        else{
+            postivionegativo = "negativo"
+        }
+
+        if (resultado % 1 === 0){
+            inteirodecimal = "inteiro"
+        }
+        else{
+            inteirodecimal = "decimal"
+        }
+        
+    }
+
+    else if(operacao === "/"){
+        resultado = a / b
+
+        if (resultado % 2 === 0){
+            parimpar = "par"
+        }
+        else{
+            parimpar = "impar"
+        }
+
+        if (resultado * 1 >= 0 ){
+            postivionegativo = "positivo"
+        }
+        else{
+            postivionegativo = "negativo"
+        }
+
+        if (resultado % 1 === 0){
+            inteirodecimal = "inteiro"
+        }
+        else{
+            inteirodecimal = "decimal"
+        }
+        
+    }
 
     
     //SAÍDA
+    document.write(`o resultado da operação entre o numero 1 e o numero 2 é ${resultado.toFixed(2)} <br/> o numero é ${parimpar}, ${postivionegativo}, ${inteirodecimal}`)
 
 
 </script>
